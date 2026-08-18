@@ -51,12 +51,12 @@ window.ARCGIGUESS_CONFIG = {
     // This is the item ID of a web map in ArcGIS Online / Enterprise.
     // If the web map is private, ArcGIS will automatically prompt the player
     // to sign in when the app loads.
-    webMapItemId: "707a71d354c540f78c2f9101eead4c09",
+    webMapItemId: "fdca373be5024a3ab8345a98ba288e0a",
 
     // The title of the layer (inside the web map above) that holds your
     // landmarks. This layer is hidden during play — its features are the
     // "answers". Each feature should be a polygon (the landmark's footprint).
-    landmarkLayerTitle: "Dubai Landmarks",
+    landmarkLayerTitle: "Saskatchewan Landmarks",
 
     // Field names on the landmark layer.
     //   idField   — the unique ID field (used to fetch each landmark's photo).
@@ -70,12 +70,12 @@ window.ARCGIGUESS_CONFIG = {
 
     // Whether to randomize landmark order each game. Set to false to always
     // play them in the layer's natural order (handy for a guided/curated tour).
-    shuffleLandmarks: true,
+    shuffleLandmarks: false,
 
     // Let players bail out mid-game: accept their current score (remaining
     // landmarks count as missed) and jump straight to the results screen.
     // Set to false to require finishing every round.
-    allowFinishEarly: true,
+    allowFinishEarly: false,
 
     /* -------------------------------------------------------------------------
      * 3. SCORING
@@ -89,7 +89,7 @@ window.ARCGIGUESS_CONFIG = {
     // dropping below `minScore`.
     scoring: {
         pointsForHit: 10, // Points for a perfect / very close guess.
-        bucketMeters: 500, // Size of each distance "band", in meters.
+        bucketMeters: 1000, // Size of each distance "band", in meters.
         penaltyPerBucket: 1, // Points lost per band you are off.
         minScore: 0, // The lowest a single round can score.
     },
@@ -175,62 +175,6 @@ window.ARCGIGUESS_CONFIG = {
                 points: "points",
             },
         },
-        {
-            code: "ar",
-            dir: "rtl",
-            toggleLabel: "English",
-            landmarkNameField: "name_ar",
-            surveyLang: "ar",
-            strings: {
-                welcomeTitle: "أهلاً بك في ArcGIGuess!",
-                welcomeDesc:
-                    "اختبر معرفتك! سنعرض لك اسم وصورة معلم وعليك النقر على الخريطة حيث تعتقد أنه يقع.<br><br>{scoringSummary}",
-                scoringSummaryTemplate:
-                    "- إجابة صحيحة (أو ضمن {bucket}م): <strong>+{points} نقاط</strong><br>- ثم <strong>-{penalty} نقطة</strong> عن كل {bucket}م بعيداً، حتى {min}.",
-                startButton: "ابدأ اللعبة",
-                loadingText: "جاري تحميل المعالم...",
-                findLandmarkText: "ابحث عن هذا المعلم:",
-                scoreDisplay: "النتيجة: {score}",
-                roundDisplay: "الجولة {current} / {total}",
-                confirmButton: "تأكيد الإجابة",
-                correctTitle: "إجابة صحيحة!",
-                correctMessage:
-                    "أحسنت! لقد ربحت <strong>+{roundScore} نقاط</strong>.",
-                incorrectTitle: "أوه, قريبة جداً!",
-                incorrectMessage:
-                    "كنت بعيداً مسافة <strong>{distance}م</strong>. لقد ربحت <strong>{roundScore} نقاط</strong>. هذا هو الموقع الصحيح.",
-                nextButton: "المعلم التالي",
-                finishEarlyButton: "إنهاء مبكر",
-                finishEarlyConfirm: "انقر مجدداً لإنهاء اللعبة",
-                gameOverButton: "أظهر النتائج",
-                gameOverTitle: "انتهت اللعبة!",
-                finalScoreText: "ها هي نتيجتك:",
-                totalScoreLabel: "النتيجة الإجمالية",
-                accuracyLabel: "الدقة",
-                foundLabel: "المعالم التي عثرت عليها",
-                playAgainButton: "العب مجدداً",
-                shareButton: "شارك النتيجة",
-                shareText:
-                    "لقد سجلت {score} نقطة في {appName}! كم يمكنك أن تسجّل؟ العب على {url}",
-                shareCardTitle: "نتيجتي في ArcGIGuess!",
-                shareCardScoreLabel: "النتيجة الإجمالية",
-                shareCardAccuracyLabel: "الدقة",
-                shareModalTitle: "شارك نتيجتك!",
-                shareModalDesc:
-                    "انقر بزر الماوس الأيمن أو اضغط مطولاً على الصورة لحفظها ومشاركتها.",
-                webMapError: "لم نتمكن من تحميل الخريطة. يرجى التحقق من المعرف.",
-                layerError:
-                    "لم نتمكن من العثور على طبقة المعالم في الخريطة. تحقق من عنوان الطبقة في config.js.",
-                submitScoreButton: "إرسال النتيجة",
-                viewLeaderboardButton: "قائمة المتصدرين",
-                submitModalTitle: "إرسال نتيجتك",
-                leaderboardModalTitle: "أعلى النتائج",
-                leaderboardLoadingText: "جاري تحميل قائمة المتصدرين...",
-                leaderboardError:
-                    "لا يمكن تحميل قائمة المتصدرين. يرجى المحاولة لاحقاً.",
-                noScores: "لم يتم إرسال أي نتائج بعد.",
-                points: "نقاط",
-            },
         },
     ],
 
@@ -295,6 +239,6 @@ window.ARCGIGUESS_CONFIG = {
         scoreField: "score",
 
         // How many top scores to show.
-        topN: 10,
+        topN: 25,
     },
 };
