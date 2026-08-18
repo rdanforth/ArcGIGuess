@@ -88,7 +88,7 @@ window.ARCGIGUESS_CONFIG = {
     // `penaltyPerBucket` point(s) for every `bucketMeters` they are off, never
     // dropping below `minScore`.
     scoring: {
-        pointsForHit: 10, // Points for a perfect / very close guess.
+        pointsForHit: 100, // Points for a perfect / very close guess.
         bucketMeters: 1000, // Size of each distance "band", in meters.
         penaltyPerBucket: 1, // Points lost per band you are off.
         minScore: 0, // The lowest a single round can score.
