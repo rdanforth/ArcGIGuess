@@ -199,7 +199,7 @@ window.ARCGIGUESS_CONFIG = {
         // Recommended size: ~1200×630px. Reusing the README screenshot here.
         image: "https://aelhussiny.github.io/ArcGIGuess/assets/screenshot.png",
         // The public URL where the game is hosted (used for og:url).
-        url: "https://aelhussiny.github.io/ArcGIGuess",
+        url: "https://rdanforth.github.io/ArcGIGuess/",
         // Your X/Twitter handle including the @ (optional).
         twitterHandle: "",
     },
@@ -221,7 +221,7 @@ window.ARCGIGUESS_CONFIG = {
 
         // The share URL of your Survey123 form.
         survey123Url:
-            "https://survey123.arcgis.com/share/c4317eb262934df4b2fe38cb42a3d1d1",
+            "https://survey123.arcgis.com/share/c9529b3a82fe4d80a51cee2b79d918a9",
 
         // The Survey123 field to pre-fill with the player's score.
         // Format is "field:<your_field_name>".
@@ -230,11 +230,11 @@ window.ARCGIGUESS_CONFIG = {
         // The FeatureServer query endpoint used to READ the leaderboard.
         // Point this at a public view of your survey's results layer.
         dataApiUrl:
-            "https://services1.arcgis.com/zu8dBGfmKCvrZHh2/arcgis/rest/services/survey123_c4317eb262934df4b2fe38cb42a3d1d1_results/FeatureServer/0/query",
+            "https://services6.arcgis.com/z6VXrUg5ZM2lNOrj/arcgis/rest/services/survey123_c9529b3a82fe4d80a51cee2b79d918a9_results/FeatureServer/0/query",
 
         // The fields in that layer used to display the leaderboard.
-        firstNameField: "first_name",
-        lastNameField: "last_name",
+        firstNameField: "firstname",
+        lastNameField: "lastname",
         scoreField: "score",
 
         // How many top scores to show.
