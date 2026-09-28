@@ -21,14 +21,14 @@ window.ARCGIGUESS_CONFIG = {
      * ---------------------------------------------------------------------- */
 
     // The name of your game. Shown in the browser tab, share card, and messages.
-    appName: "ArcGIGuess",
+    appName: "ArcGIGuess (COWT-APPS Edition)",
 
     // A short tagline used in the page title and as the default share-card footer.
     tagline: "A geo-guessing game powered by the ArcGIS Maps SDK for JavaScript",
 
     // Text shown at the bottom of the shareable results card.
     // Set to null to fall back to `tagline`.
-    shareCardFooter: null,
+    shareCardFooter: "Hello COWT-APPS!",
 
     // Note: the logo, guess-pin, and README/social screenshot are plain files
     // in the /assets folder — just REPLACE them (keeping the same filenames)
@@ -51,12 +51,12 @@ window.ARCGIGUESS_CONFIG = {
     // This is the item ID of a web map in ArcGIS Online / Enterprise.
     // If the web map is private, ArcGIS will automatically prompt the player
     // to sign in when the app loads.
-    webMapItemId: "fdca373be5024a3ab8345a98ba288e0a",
+    webMapItemId: "3a70a498b6804792baa00e409939eadb",
 
     // The title of the layer (inside the web map above) that holds your
     // landmarks. This layer is hidden during play — its features are the
     // "answers". Each feature should be a polygon (the landmark's footprint).
-    landmarkLayerTitle: "Saskatchewan Landmarks",
+    landmarkLayerTitle: "Regina Landmarks",
 
     // Field names on the landmark layer.
     //   idField   — the unique ID field (used to fetch each landmark's photo).
@@ -70,12 +70,12 @@ window.ARCGIGUESS_CONFIG = {
 
     // Whether to randomize landmark order each game. Set to false to always
     // play them in the layer's natural order (handy for a guided/curated tour).
-    shuffleLandmarks: false,
+    shuffleLandmarks: true,
 
     // Let players bail out mid-game: accept their current score (remaining
     // landmarks count as missed) and jump straight to the results screen.
     // Set to false to require finishing every round.
-    allowFinishEarly: false,
+    allowFinishEarly: true,
 
     /* -------------------------------------------------------------------------
      * 3. SCORING
@@ -88,8 +88,8 @@ window.ARCGIGUESS_CONFIG = {
     // `penaltyPerBucket` point(s) for every `bucketMeters` they are off, never
     // dropping below `minScore`.
     scoring: {
-        pointsForHit: 100, // Points for a perfect / very close guess.
-        bucketMeters: 1000, // Size of each distance "band", in meters.
+        pointsForHit: 5, // Points for a perfect / very close guess.
+        bucketMeters: 5, // Size of each distance "band", in meters.
         penaltyPerBucket: 1, // Points lost per band you are off.
         minScore: 0, // The lowest a single round can score.
     },
@@ -121,7 +121,7 @@ window.ARCGIGUESS_CONFIG = {
             landmarkNameField: "name",
             surveyLang: null,
             strings: {
-                welcomeTitle: "Welcome to ArcGIGuess!",
+                welcomeTitle: "Welcome to ArcGIGuess! (COWT-APPS Edition!)",
                 // {scoringSummary} is generated from the `scoring` block above.
                 welcomeDesc:
                     "Test your knowledge! We'll show you the name and a picture of a landmark, and you click on the map where you think it is.<br><br>{scoringSummary}",
