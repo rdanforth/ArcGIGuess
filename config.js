@@ -66,11 +66,11 @@ window.ARCGIGUESS_CONFIG = {
     // How many landmarks to play per game. Set to null to use every landmark
     // in the layer. If you have 40 landmarks and set this to 10, each game
     // picks 10 at random.
-    roundsPerGame: null,
+    roundsPerGame: 5,
 
     // Whether to randomize landmark order each game. Set to false to always
     // play them in the layer's natural order (handy for a guided/curated tour).
-    shuffleLandmarks: false,
+    shuffleLandmarks: true,
 
     // Let players bail out mid-game: accept their current score (remaining
     // landmarks count as missed) and jump straight to the results screen.
@@ -124,7 +124,7 @@ window.ARCGIGUESS_CONFIG = {
                 welcomeTitle: "Welcome to ArcGIGuess!",
                 // {scoringSummary} is generated from the `scoring` block above.
                 welcomeDesc:
-                    "Test your knowledge! We'll show you the name and a picture of a landmark, and you click on the map where you think it is.<br><br>{scoringSummary}",
+                    "Test your knowledge! We'll show you the name and a picture of a Saskatchewan landmark or a dream vacation from an attendee at the September 1st GoGeomatics meetup, and you click on the map where you think it is.<br><br>{scoringSummary}",
                 // Template for the auto-generated scoring explanation.
                 // Placeholders: {points} {bucket} {penalty} {min}
                 scoringSummaryTemplate:
